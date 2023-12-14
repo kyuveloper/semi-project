@@ -1,3 +1,8 @@
+### 윈도우에서 git을 clone받는 방법
+![clone.png](image/clone.png)<br>
+Download.ZIP을 눌러서 원하는 폴더에 압축을 푸는 방식과<br>
+링크를 복사해서 원하는 폴더에서 cmd를 실행시켜 <br>
+git clone 링크 를 입력하면 받아진다
 ### main에서 작업시 충돌 해결 방법
 내가 메인에서 만들어서 충돌 남 <br>
 같은 main이라 안됐던거임 <br>
@@ -51,4 +56,8 @@ commit 한 순서대로 취소를 해야됨 안그러면 충돌남<br>
 ![2번커밋reset.png](image/2번커밋reset.png)<br>
 git reset --hard 357d199b 입력시<br>
 ![2번커밋reset화면.png](image/2번커밋reset화면.png)<br>
-2번커밋까지 돌아왔고 3번커밋을 입력시 3번커밋까지 돌아와진다
+2번커밋까지 돌아온 걸 확인 할 수 있다.<br>
+![3번커밋reset.png](image/3번커밋reset.png)<br>
+git reset --hard bf0c317b를 실행시<br>
+![3번커밋rest화면.png](image/3번커밋reset화면.png)<br>
+3번커밋까지 돌아온 걸 확인 할 수 있다.
