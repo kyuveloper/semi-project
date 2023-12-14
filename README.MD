@@ -12,5 +12,5 @@
 7. git push origin (branch 이름)
 ### main branch와 다른 branch의 병합 방법
 1. git checkout main : main에 병합할 것이니 main으로 이동
-2. git merge (branch 이름) : 입력한 이름의 branch를 main에 병합<br>확신은 안서지만 git merge가 main에 최종적으로 등록시켜주는 거 같음
+2. git merge (branch 이름) : 입력한 이름의 branch를 main에 병합<br> git merge 는 병합 main에서 git push해야됨
 3. git branch --merged : 병합이 됐는지 확인
