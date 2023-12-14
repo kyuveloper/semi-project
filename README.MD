@@ -41,4 +41,14 @@ git rest --hard bf0c317b 입력 후 결과<br>
 git revert bf0c317b을 입력하면 git commit 되돌리기3이 취소된걸 확인 할 수 있다<br>
 git rest --hard bf0c317b를 입력하면 취소됐던 git commit 되돌리기3 을 다시 불러왔다
 #### 주의사항
-commit 한 순서대로 취소를 해야됨 안그러면 충돌남
+commit 한 순서대로 취소를 해야됨 안그러면 충돌남<br>
+![현재상태.png](image/현재상태.png)<br>
+3번커밋이 존재하는 상태에서 git revert 357d199b을 실행시<br>
+![2번커밋revert.png](image/2번커밋revert.png)<br>
+![2번커밋revert화면.png](image/2번커밋revert화면.png)<br>
+화면과 같이 충돌이 발생함<br>
+충돌 해결을 먼저 해줘야됨<br>
+![2번커밋reset.png](image/2번커밋reset.png)<br>
+git reset --hard 357d199b 입력시<br>
+![2번커밋reset화면.png](image/2번커밋reset화면.png)<br>
+2번커밋까지 돌아왔고 3번커밋을 입력시 3번커밋까지 돌아와진다
