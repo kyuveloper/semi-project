@@ -4,11 +4,22 @@ Download.ZIP을 눌러서 원하는 폴더에 압축을 푸는 방식과<br>
 링크를 복사해서 원하는 폴더에서 cmd를 실행시켜 <br>
 git clone 링크 를 입력하면 받아진다<br>
 ![cmd방식.png](image/cmd방식.png)<br>
-### main에서 작업시 충돌 해결 방법
+### main에서 작업하지 않고 각자의 branch에서 작업하고 합치는 이유
 여러명에서 main에서 동시에 작업을 하다가
 누군가 commit을 해버리면 그사람과 다른 사람들의 버전이 달라져서
-에러가 발생한다.
-이 경우에 강제로 합쳐주는 git stash를 사용한다
+에러가 발생한다.<br>
+이 경우에 강제로 합쳐주는 git stash를 사용한다<br>
+때문에 각자의 branch에서 따로 작업을 한 다음에 main에 합쳐
+버전이 달라지는걸 방지해준다 <br>
+### commit을 자주하는 이유
+A,B,C,D라는 각자 branch와 main이 존재할때<br>
+![기본상태.png](image/기본상태.png)<br>
+commit을 거의 안해 많은 작업량을 올린 경우<br>
+![작업량많은상태.png](image/작업량많은상태.png)<br>
+commit을 자주 해서 적은 작업량을 올린 경우<br>
+![작업량적은상태.png](image/작업량적은상태.png)<br>
+둘 다 오류가 발생할 경우 수정하기 쉬운건 commit을 자주 한 경우다<br>
+그래서 commit에 대한 시간을 정하고 설명을 적어준다<br>
 ### 개인 branch 생성 - 이동 - 커밋
 1. git branch (branch 이름) : 입력한 이름의 branch 생성
 2. git branch : 내가 어느 branch에 있는지 어떤 branch가 있는지 확인 용도
@@ -62,5 +73,5 @@ ex)3번커밋이 존재하는 상태에서 2번 커밋을 취소하려고 시도
 ![2번커밋reset화면.png](image/2번커밋reset화면.png)<br>
 3-1. git reset --hard bf0c317b를 실행시<br>
 ![3번커밋reset.png](image/3번커밋reset.png)<br>
-3-2. 3번커밋까지 돌아온 걸 확인 할 수 있다.
+3-2. 3번커밋까지 돌아온 걸 확인 할 수 있다.<br>
 ![3번커밋rest화면.png](image/3번커밋reset화면.png)<br>
