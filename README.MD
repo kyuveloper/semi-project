@@ -5,8 +5,9 @@ Download.ZIP을 눌러서 원하는 폴더에 압축을 푸는 방식과<br>
 git clone 링크 를 입력하면 받아진다<br>
 ![cmd방식.png](image/cmd방식.png)<br>
 ### main에서 작업시 충돌 해결 방법
-내가 메인에서 만들어서 충돌 남 <br>
-같은 main이라 안됐던거임 <br>
+여러명에서 main에서 동시에 작업을 하다가
+누군가 commit을 해버리면 그사람과 다른 사람들의 버전이 달라져서
+에러가 발생한다.
 이 경우에 강제로 합쳐주는 git stash를 사용한다
 ### 개인 branch 생성 - 이동 - 커밋
 1. git branch (branch 이름) : 입력한 이름의 branch 생성
@@ -34,31 +35,32 @@ git을 누르고 오른쪽 하단을 보면 log의 이름이 간소화되서 나
 git revert 로그이름 : 로그이름을 취소한다 <br>
 git reset --hard 로그이름 : 취소한 로그이름을 다시 불러온다<br>
 #### 예시
-sh.MD에 있는 현재 상황<br>
+1. sh.MD에 있는 현재 상황<br>
 ![현재상태.png](image/현재상태.png)<br>
-git revert bf0c317b 입력<br>
+2. git revert bf0c317b 입력<br>
 ![revert입력.png](image/revert입력.png)<br>
-git revert bf0c317b 입력 후 결과<br>
+3. git revert bf0c317b 입력 후 결과<br>
 ![rever한결과.png](image/revert한결과.png)<br>
-git rest --hard bf0c317b 입력<br>
+4. git rest --hard bf0c317b 입력<br>
 ![rest입력.png](image/rest입력.png)<br>
-git rest --hard bf0c317b 입력 후 결과<br>
+5. git rest --hard bf0c317b 입력 후 결과<br>
 ![rest한결과.png](image/rest한결과.png)<br>
 git revert bf0c317b을 입력하면 git commit 되돌리기3이 취소된걸 확인 할 수 있다<br>
 git rest --hard bf0c317b를 입력하면 취소됐던 git commit 되돌리기3 을 다시 불러왔다
-#### 주의사항
+### !주의사항!
 commit 한 순서대로 취소를 해야됨 안그러면 충돌남<br>
 ![현재상태.png](image/현재상태.png)<br>
-3번커밋이 존재하는 상태에서 git revert 357d199b을 실행시<br>
+ex)3번커밋이 존재하는 상태에서 2번 커밋을 취소하려고 시도하기
+1. git revert 357d199b을 실행시 (357d199b은 2번커밋) <br>
 ![2번커밋revert.png](image/2번커밋revert.png)<br>
 ![2번커밋revert화면.png](image/2번커밋revert화면.png)<br>
 화면과 같이 충돌이 발생함<br>
-충돌 해결을 먼저 해줘야됨<br>
+충돌 해결을 반드시 먼저 해줘야됨<br>
+2-1. git reset --hard 357d199b 입력시<br>
 ![2번커밋reset.png](image/2번커밋reset.png)<br>
-git reset --hard 357d199b 입력시<br>
+2-2. 2번커밋까지 돌아온 걸 확인 할 수 있다.<br>
 ![2번커밋reset화면.png](image/2번커밋reset화면.png)<br>
-2번커밋까지 돌아온 걸 확인 할 수 있다.<br>
+3-1. git reset --hard bf0c317b를 실행시<br>
 ![3번커밋reset.png](image/3번커밋reset.png)<br>
-git reset --hard bf0c317b를 실행시<br>
+3-2. 3번커밋까지 돌아온 걸 확인 할 수 있다.
 ![3번커밋rest화면.png](image/3번커밋reset화면.png)<br>
-3번커밋까지 돌아온 걸 확인 할 수 있다.
