@@ -14,6 +14,8 @@
 1. git checkout main : main에 병합할 것이니 main으로 이동
 2. git merge (branch 이름) : 입력한 이름의 branch를 main에 병합<br> git merge 는 병합 main에서 git push해야됨
 3. git branch --merged : 병합이 됐는지 확인
+### main에서의 데이터 받는 방법
+git pull 또는 git pull origin main
 ### commit 확인, 취소, 다시 불러오기
 #### log 확인방법
 git log : log를 확인한다. 종료 Q <br> ![로그확인.png](로그확인.png)
