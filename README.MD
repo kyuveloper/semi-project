@@ -75,3 +75,10 @@ ex)3번커밋이 존재하는 상태에서 2번 커밋을 취소하려고 시도
 ![3번커밋reset.png](image/3번커밋reset.png)<br>
 3-2. 3번커밋까지 돌아온 걸 확인 할 수 있다.<br>
 ![3번커밋rest화면.png](image/3번커밋reset화면.png)<br>
+
+간단하게 그림으로 보면<br>
+![커밋3.png](image/커밋3.png)<br>
+현재 상황이 이러한데 여기서 commit2를 취소하려고 한다<br>
+![커밋2빼기.png](image/커밋2빼기.png)<br>
+commit3이 존재하는데 commit2를 취소하려고 하니 commit3이 붕 떠서<br>
+에러가 발생하는 것이다
