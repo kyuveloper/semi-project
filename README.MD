@@ -2,7 +2,8 @@
 ![clone.png](image/clone.png)<br>
 Download.ZIP을 눌러서 원하는 폴더에 압축을 푸는 방식과<br>
 링크를 복사해서 원하는 폴더에서 cmd를 실행시켜 <br>
-git clone 링크 를 입력하면 받아진다
+git clone 링크 를 입력하면 받아진다<br>
+![cmd방식.png](image/cmd방식.png)<br>
 ### main에서 작업시 충돌 해결 방법
 내가 메인에서 만들어서 충돌 남 <br>
 같은 main이라 안됐던거임 <br>
