@@ -14,5 +14,13 @@
 1. git checkout main : main에 병합할 것이니 main으로 이동
 2. git merge (branch 이름) : 입력한 이름의 branch를 main에 병합<br> git merge 는 병합 main에서 git push해야됨
 3. git branch --merged : 병합이 됐는지 확인
-### commit 되돌리기 다시 불러오기
-git log : log를 확인한다. 종료 Q <br> ![로그확인.png](/image/로그확인.png)
+### commit 확인, 취소, 다시 불러오기
+#### log 확인방법
+git log : log를 확인한다. 종료 Q <br> ![로그확인.png](로그확인.png)
+commit 오른쪽의 데이터가 로그임 하지만 이름이 너무 긴 문제가 있다<br>
+3번커밋의 log이름은 bf0c317bb8e9bc482e92a5c3e81ff5fc380b1106
+![로그확인2.png](로그확인2.png)
+git을 누르고 오른쪽 하단을 보면 log의 이름이 간소화되서 나온다 <br>
+간소화된 3번커밋의 이름은 bf0c317b <br>
+#### commit 취소방법
+git revert 로그이름 : 로그이름을 취소한다
