@@ -18,7 +18,7 @@
 git pull 또는 git pull origin main
 ### commit 확인, 취소, 다시 불러오기
 #### log 확인방법
-git log : log를 확인한다. 종료 Q <br> ![로그확인.png](image/로그확인.png)
+git log : log를 확인한다. 종료 Q <br> ![로그확인.png](image/로그확인.png)<br>
 commit 오른쪽의 데이터가 로그임 하지만 이름이 너무 긴 문제가 있다<br>
 3번커밋의 log이름은 bf0c317bb8e9bc482e92a5c3e81ff5fc380b1106
 ![로그확인2.png](image/로그확인2.png)
@@ -40,3 +40,5 @@ git rest --hard bf0c317b 입력 후 결과<br>
 ![rest한결과.png](image/rest한결과.png)<br>
 git revert bf0c317b을 입력하면 git commit 되돌리기3이 취소된걸 확인 할 수 있다<br>
 git rest --hard bf0c317b를 입력하면 취소됐던 git commit 되돌리기3 을 다시 불러왔다
+#### 주의사항
+commit 한 순서대로 취소를 해야됨 안그러면 충돌남
