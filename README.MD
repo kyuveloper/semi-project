@@ -18,11 +18,25 @@
 git pull 또는 git pull origin main
 ### commit 확인, 취소, 다시 불러오기
 #### log 확인방법
-git log : log를 확인한다. 종료 Q <br> ![로그확인.png](로그확인.png)
+git log : log를 확인한다. 종료 Q <br> ![로그확인.png](image/로그확인.png)
 commit 오른쪽의 데이터가 로그임 하지만 이름이 너무 긴 문제가 있다<br>
 3번커밋의 log이름은 bf0c317bb8e9bc482e92a5c3e81ff5fc380b1106
-![로그확인2.png](로그확인2.png)
+![로그확인2.png](image/로그확인2.png)
 git을 누르고 오른쪽 하단을 보면 log의 이름이 간소화되서 나온다 <br>
 간소화된 3번커밋의 이름은 bf0c317b <br>
-#### commit 취소방법
-git revert 로그이름 : 로그이름을 취소한다
+#### commit 취소 및 불러오기 방법
+git revert 로그이름 : 로그이름을 취소한다 <br>
+git reset --hard 로그이름 : 취소한 로그이름을 다시 불러온다<br>
+#### 예시
+sh.MD에 있는 현재 상황<br>
+![현재상태.png](image/현재상태.png)<br>
+git revert bf0c317b 입력<br>
+![revert입력.png](image/revert입력.png)<br>
+git revert bf0c317b 입력 후 결과<br>
+![rever한결과.png](image/revert한결과.png)<br>
+git rest --hard bf0c317b 입력<br>
+![rest입력.png](image/rest입력.png)<br>
+git rest --hard bf0c317b 입력 후 결과<br>
+![rest한결과.png](image/rest한결과.png)<br>
+git revert bf0c317b을 입력하면 git commit 되돌리기3이 취소된걸 확인 할 수 있다<br>
+git rest --hard bf0c317b를 입력하면 취소됐던 git commit 되돌리기3 을 다시 불러왔다
