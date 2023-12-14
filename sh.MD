@@ -18,4 +18,5 @@ git pull : 다른 이용자가 미리 올려놓은 데이터 받기
 
 git commit 되돌리기용
 git commit 되돌리기1
+git commit 되돌리기2
 
