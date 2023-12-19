@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/auth/login}" th:method="POST">
+    <label>이메일 : </label>
+    <input type="email" id="userEmail" name="userEmail"/>
+    <br>
+    <label>비밀번호 : </label>
+    <input type="password" id="password" name="password"/>
+    <br>
+    <button>로그인</button>
+</form>
+</body>
+</html>
