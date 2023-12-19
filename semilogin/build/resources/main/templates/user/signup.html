@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+</head>
+<body>
+<h1>회원가입 페이지</h1>
+<form th:action="@{/user/signup}" method="post">
+    이메일 : <input type="text" name="userEmail"/> <br>
+    닉네임 : <input type="text" name="userNickName"/> <br>
+    비밀번호 : <input type="password" name="password"/> <br>
+    권한 :
+    <select name="auth">
+        <option value="USER">일반회원</option>
+        <option value="ADMIN">관리자</option>
+    </select>
+    <br>
+    펫코드 : <input type="number" name="petCode"/> <br>
+<!--    등록날짜 : <input type="month" name="registDate"/> <br>-->
+<!--    수정날짜 : <input type="time" name="updateDate"/> <br>-->
+    <button>회원가입</button>
+</form>
+<script th:inline="javascript">
+    const message = [[${message}]];
+    if(message){
+        alert(message);
+    }
+</script>
+</body>
+</html>
