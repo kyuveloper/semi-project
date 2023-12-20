@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://kit.fontawesome.com/e8f09b5de5.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+  <link rel="stylesheet" href="./style.css">
+  <title>Semi Project Main Page</title>
+</head>
+<body>
+<header id="header_bar">
+  <nav id="nav_bar">
+    <div class="main_title">
+      <a href="index.html"><i class="fa-solid fa-dog"></i> PetTales</a>
+    </div>
+    <div class="main_menus">
+      <div class="main_menu"><a href="#">Home</a></div>
+      <div class="main_menu"><a href="#">Start</a></div>
+      <div class="main_menu"><a href="#">Support</a></div>
+      <div class="main_menu"><a href="#">Contact Us</a></div>
+    </div>
+    <div class="main_mypage">
+      <a href="#"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
+    </div>
+  </nav>
+</header>
+<main>
+  <article>
+    <div class="myPage_box">
+      <ul class="myPage_menus">
+        <li class="myPage_menu">로그인</li>
+        <li class="myPage_menu">마이페이지</li>
+        <li class="myPage_menu">설정</li>
+      </ul>
+    </div>
+    <div class="slider_container">
+      <img src="./dogImg.jpeg" alt="" class="slide_img">
+      <img src="./dogImg_2.jpg" alt="" class="slide_img">
+      <img src="./dogImg_3.jpg" alt="" class="slide_img">
+      <div class="button">
+        <div class="prev" onclick="goPrev()"><i class="fa-solid fa-caret-right fa-rotate-180"></i></div>
+        <div class="next" onclick="goNext()"><i class="fa-solid fa-caret-right"></i></div>
+      </div>
+      <div class="slider_text_contents">
+        <div class="slider_text">
+          PetTales,<br>
+          <p id="dynamic"></p><br>
+          최고의 선택
+        </div>
+      </div>
+    </div>
+
+  </article>
+</main>
+<footer>
+  <div id="footer">
+    <div class="comInfo">
+      <div class="comLogo"><i class="fa-solid fa-dog"></i></div>
+      <div class="comInfo_text">
+        <p>
+          주식회사 위드명 | 대표 김아무개<br>
+          사업자 등록 번호 123-456-78910<br>
+          서울특별시 구로구 경인로 557 삼영빌딩 4층<br>
+          contact@withmung.com<br>
+        </p>
+      </div>
+    </div>
+    <div class="etc">
+      <p>
+        <a href="">이용약관</a> | <a href="">개인정보처리지침</a> | <a href="">고객지원</a> | <a href="">1:1 문의</a>
+      </p>
+    </div>
+    <div class="sns">
+      <a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook fa-fade"></i></a>
+      <a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-fade"></i></a>
+      <a href="http://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube fa-fade"></i></a>
+    </div>
+  </div>
+</footer>
+</body>
+<script src="main.js"></script>
+</html>

@@ -1,0 +1,237 @@
+:root {
+    --main-color: rgb(136, 100, 78);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: normal;
+}
+
+div {
+    display: block;
+}
+
+a {
+    color: black;
+}
+
+/* Header랑 footer 양식 */
+#header_bar {
+    background-color: var(--main-color);
+}
+#nav_bar {
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 5.5rem;
+    margin: 0 auto;
+    padding: 1.25rem 4rem;
+    position: relative;
+}
+
+.main_title a {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.main_menus {
+    display: flex;
+    position: absolute;
+    right: 10%;
+}
+.main_menus a {
+    opacity: 0.5;
+    color: white;
+}
+.main_menus a::after {
+    display: block;
+    content: '';
+    border-bottom: solid .2rem whitesmoke;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+.main_menus a:hover::after {
+    transform: scaleX(1);
+}
+
+.main_menu {
+    margin: 0 3rem;
+    font-size: 1.3rem;
+}
+
+.main_mypage {
+    font-size: 1.7rem;
+    opacity: .5;
+}
+
+#footer {
+    background-color: var(--main-color);
+    width: 100%;
+    height: 7rem;
+    padding: 0 4rem;
+    display: flex;
+    position: relative;
+}
+
+.comInfo {
+    margin: auto 0;
+}
+
+.comLogo {
+    font-size: 1.8rem;
+}
+.comLogo i {
+    color: white;
+    opacity: .7;
+    font-size: 2rem;
+}
+.comInfo_text p {
+    color: white;
+    opacity: .7;
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+.etc {
+    color: white;
+    flex-grow: 3;
+    position: absolute;
+    left: 43%;
+    bottom: 0.7rem;
+}
+.etc p {
+    opacity: .7;
+    margin: 0;
+    font-size: .8rem;
+}
+.etc a {
+    opacity: .7;
+    color: white;
+}
+
+.sns {
+    flex-grow: 1;
+    text-align: right;
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+}
+.sns i {
+    color: white;
+    font-size: 2rem;
+    margin: 0 0.5rem;
+}
+
+/* 슬라이드 이미지 */
+.slider_container {
+    width: 70rem;
+    height: 600px;
+    margin: 2rem auto;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.slide_img {
+    width: 100%;
+    height: 100%;
+    transition: .7s;
+    position: absolute;
+}
+.slider_container img {
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+.button {
+    color: var(--main-color);
+    cursor:pointer;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    top: 45%;
+    font-size: 3rem;
+}
+
+.slider_text_contents {
+    position: absolute;
+    left: 10%;
+    top: 150px;
+    width: 15rem;
+    height: 300px;
+    background-color: rgba( 255, 255, 255, 0.4);
+    border-radius: 2rem;
+}
+.slider_text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+}
+
+#dynamic {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+#dynamic::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -2px;
+    width: 2.5px;
+    height: 100%;
+    background-color: var(--main-color);
+}
+#dynamic.twinkle::after {
+    display: none;
+}
+
+.myPage_menus {
+    overflow: hidden;
+    background-color: var(--main-color);
+    width: 9rem;
+    height: 0;
+    max-height: 9rem;
+    position: absolute;
+    z-index: 2; /* z-index 값 높게하면 더 상단에 위치되어 보여짐 */
+    top: 5.5rem;
+    right: 0;
+    text-align: center;
+    transition: all .5s;
+}
+.myPage_menus.show {
+    height: 9rem;
+    transition: all .5s;
+}
+
+.myPage_menus li {
+    color: white;
+    opacity: .5;
+    padding: .7rem 0;
+}
